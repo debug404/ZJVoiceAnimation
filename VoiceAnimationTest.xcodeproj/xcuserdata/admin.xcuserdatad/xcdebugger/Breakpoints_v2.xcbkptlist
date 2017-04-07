@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VoiceAnimationTest/ZJVoiceAnimationView.m"
-            timestampString = "513246682.889461"
+            timestampString = "513251125.421686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "-drawRect:"
             landmarkType = "7">
          </BreakpointContent>

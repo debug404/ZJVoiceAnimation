@@ -19,9 +19,20 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.zjAnimation];
-
-    [self.zjAnimation startAnimation];
+    
 }
+
+- (IBAction)voiceClick:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [self.zjAnimation startAnimation];
+    } else {
+        [self.zjAnimation stopAnimation];
+    }
+    
+    
+}
+
 - (IBAction)randomClick:(UIButton *)sender {
     
     NSLog(@"%ld",[self random] + 18);
@@ -46,6 +57,9 @@
 - (ZJVoiceAnimationView *)zjAnimation {
     if (!_zjAnimation) {
         _zjAnimation = [[ZJVoiceAnimationView alloc] initWithFrame:CGRectMake(0, 400, self.view.frame.size.width, 100)];
+        
+        
+        
     }
     
     return _zjAnimation;

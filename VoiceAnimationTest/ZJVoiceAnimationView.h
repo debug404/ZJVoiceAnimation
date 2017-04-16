@@ -8,16 +8,31 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, AnimationDrawType) {
+typedef NS_ENUM(NSUInteger, ZAnimationDrawType) {
+    kNoneAnimationType,//无动画动画
     kInitAnimationType,//初始化动画
     kStarAnimationType,//开始动画
     kEndTransitionAnimationType,//停止过渡过程
     kEndAnimationType,//停止
 };
 
+typedef NS_ENUM(NSUInteger, ZAnimationDrawButtonType) {
+    kNormalType,//默认状态
+    kSelectedType,//长按选中状态
+    kDoneType,//点击状态
+};
+
+@protocol ZVoiceDelegate <NSObject>
+
+- (void)z_begin;
+- (void)z_stop;
+
+@end
+
 @interface ZJVoiceAnimationView : UIView
 
 
+@property (nonatomic,weak) id<ZVoiceDelegate> delegate;
 /**
  开始动画
  */
